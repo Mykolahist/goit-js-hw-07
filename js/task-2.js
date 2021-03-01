@@ -9,13 +9,14 @@ const ingredients = [
 
 const scheduleIngredients = document.querySelector('#ingredients');
 
-const elements = ingredients.map(option => {
-     const ingrElements = document.createElement('li');
+const makeScheduleIngredients = options => {
+  return options.map(option => {
+    const ingrElements = document.createElement('li');
     ingrElements.textContent = option;
 
     return ingrElements;
-});
+  });
+};
 
-console.log(elements);
-
+const elements = makeScheduleIngredients(ingredients);
 scheduleIngredients.append(...elements);
