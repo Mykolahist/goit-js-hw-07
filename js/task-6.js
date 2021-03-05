@@ -14,4 +14,7 @@ function onValidInputBlur() {
             validationInput.classList.remove('valid');
         }
     }
+    if (event.currentTarget.value.length === 0 && validationInput.classList.contains('invalid')) {
+        validationInput.classList.remove('invalid');
+    }
 }
